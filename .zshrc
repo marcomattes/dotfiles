@@ -1,0 +1,78 @@
+export ZSH=/Users/marco.mattes/.oh-my-zsh
+
+TERM=xterm-256color
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE='nerdfont-complete'
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_beginning"
+POWERLEVEL9K_RVM_BACKGROUND="black"
+POWERLEVEL9K_RVM_FOREGROUND="249"
+POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_COLOR="red"
+POWERLEVEL9K_TIME_BACKGROUND="black"
+POWERLEVEL9K_TIME_FOREGROUND="249"
+POWERLEVEL9K_TIME_FORMAT="\UF43A %D{%H:%M  \UF133  %m.%d.%y}"
+POWERLEVEL9K_RVM_BACKGROUND="black"
+POWERLEVEL9K_RVM_FOREGROUND="249"
+POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_COLOR="red"
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='white'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='black'
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='blue'
+POWERLEVEL9K_FOLDER_ICON=''
+POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+POWERLEVEL9K_VCS_UNTRACKED_ICON='\u25CF'
+POWERLEVEL9K_VCS_UNSTAGED_ICON='\u00b1'
+POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON='\u2193'
+POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
+POWERLEVEL9K_VCS_COMMIT_ICON="\uf417"
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{white}"
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} "
+POWERLEVEL9K_CUSTOM_INTERNET_SIGNAL="zsh_internet_signal"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh root_indicator dir dir_writable vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time  status node_version ip)
+HIST_STAMPS="dd/mm/yyyy"
+
+
+
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=("rm -rf *" "fg=white,bold,bg=red")
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]="fg=white"
+ZSH_HIGHLIGHT_STYLES[path_pathseparator]="fg=grey"
+ZSH_HIGHLIGHT_STYLES[alias]="fg=cyan"
+ZSH_HIGHLIGHT_STYLES[builtin]="fg=cyan"
+ZSH_HIGHLIGHT_STYLES[function]="fg=cyan"
+ZSH_HIGHLIGHT_STYLES[command]="fg=green"
+ZSH_HIGHLIGHT_STYLES[precommand]="fg=green"
+ZSH_HIGHLIGHT_STYLES[hashed-command]="fg=green"
+ZSH_HIGHLIGHT_STYLES[commandseparator]="fg=yellow"
+ZSH_HIGHLIGHT_STYLES[redirection]="fg=magenta"
+ZSH_HIGHLIGHT_STYLES[bracket-level-1]="fg=cyan,bold"
+ZSH_HIGHLIGHT_STYLES[bracket-level-2]="fg=green,bold"
+ZSH_HIGHLIGHT_STYLES[bracket-level-3]="fg=magenta,bold"
+ZSH_HIGHLIGHT_STYLES[bracket-level-4]="fg=yellow,bold"
+
+plugins=(git common-aliases npm yarn zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
+source $ZSH/alias.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
