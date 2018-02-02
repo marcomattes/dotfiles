@@ -17,15 +17,7 @@ module.exports = {
   ],
 
   scopes: [
-    {name: 'framework'},
-    {name: 'header'},
-    {name: 'footer'},
-    {name: 'blog'},
-    {name: 'benefits'},
-    {name: 'navigation'},
-    {name: 'blog-meta'},
-    {name: 'forms'},
-    {name: 'related-content'}
+    {name: 'framework'}
   ],
 
 
