@@ -1,14 +1,66 @@
 {
-    "compilerOptions": {
-        "lib": ["es5", "es6"],
-        "target": "es6",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "sourceMap": true
-    },
-    "exclude": [
-        "node_modules"
-    ]
+  "compileOnSave": false,
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "strictNullChecks": false,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@enums": [
+        "app/enums/enums.ts"
+      ],
+      "@models": [
+        "app/models/index.ts"
+      ],
+      "@pipes": [
+        "app/pipes/index.ts"
+      ],
+      "@proxy/service": [
+        "app/services/proxy/proxy.service.ts"
+      ],
+      "@proxy/serviceEndpoints": [
+        "app/services/proxy/serviceEndpoints.ts"
+      ],
+      "@environment": [
+        "environments/environment.ts"
+      ],
+      "@util/httpInterceptor": [
+        "app/services/util/interceptor/http-interceptor/http-interceptor.service.ts"
+      ],
+      "@util/broadcastService": [
+        "app/services/util/broadcast/broadcast.service.ts"
+      ],
+      "@util/broadcastNames": [
+        "app/services/util/broadcast/broadcastNames.ts"
+      ],
+      "@util/translationPreparation": [
+        "app/services/util/transform/translation-preparation.service.ts"
+      ],
+      "@util/typeChecker": [
+        "app/services/util/typeChecker/type-checker.service.ts"
+      ],
+      "@util/scrollService": [
+        "app/services/util/scrollService/scroll.service.ts"
+      ],
+      "@util/units": [
+        "app/services/util/transform/units.ts"
+      ]
+    }
+  }
 }
